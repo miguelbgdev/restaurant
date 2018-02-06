@@ -1,0 +1,72 @@
+<!--
+  Generated template for the RegisterPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header id="cont-registro-header">
+
+  <ion-navbar>
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content id="cont-registro" padding>
+  <div class="login-box">
+
+    <form (ngSubmit)="register()" #registerForm="ngForm">
+      <ion-row>
+        <ion-col>
+          <ion-item class="trans-input">>
+            <ion-label color="primary" stacked>Nombre</ion-label>
+            <ion-input placeholder="Nombre"></ion-input>
+          </ion-item>
+          <ion-item class="trans-input">>
+            <ion-label color="primary" stacked>Apellido</ion-label>
+            <ion-input placeholder="Apellido"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item class="trans-input">>
+            <ion-label color="primary" stacked>Departamento</ion-label>
+            <ion-input placeholder="Departamento"></ion-input>
+          </ion-item>
+          <ion-item class="trans-input">>
+            <ion-label color="primary" stacked>Ciudad</ion-label>
+            <ion-input placeholder="Ciudad"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-list inset>
+            <ion-item class="trans-input">
+              <ion-label color="primary" stacked>Email</ion-label>
+              <ion-input type="email" placeholder="Email" name="email" [(ngModel)]="registerCredentials.email" required></ion-input>
+            </ion-item>
+            <ion-item class="trans-input">
+              <ion-label color="primary" stacked>Contrasena</ion-label>
+              <ion-input type="password" placeholder="Contrasena" name="password" [(ngModel)]="registerCredentials.password" required></ion-input>
+            </ion-item>
+          </ion-list>
+          <ion-item class="trans-input">>
+            <ion-label color="primary" stacked>Celular</ion-label>
+            <ion-input type="tel" placeholder="(+57)"></ion-input>
+          </ion-item>
+          <ion-item class="trans-input">>
+            <ion-label color="primary" stacked>Direccion</ion-label>
+            <ion-input placeholder="Direccion"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <p align="center">Completa todos los campos (*) obligatorios</p>
+      <ion-row>
+        <ion-col class="signup-col">
+          <button ion-button class="submit-btn" full type="submit" [disabled]="!registerForm.form.valid">Register</button>
+        </ion-col>
+      </ion-row>
+
+    </form>
+  </div>
+</ion-content>
